@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+
 
 function App() {
   //  todos 초기값을 빈 배열로 생성하겠다는 의미
@@ -31,11 +32,13 @@ function App() {
     //복사된 배열에서 지정된 자리값(index)를 1개 제거하겠다는 의미
     //updateTodos : 복사된 배열
     // slice : 제거
-    updateTodos.slice(index,1);
+    updateTodos.splice(index,1);
     // 내가 제거하고 싶은 할 일을 제거한 후 
     // setTodos를 활용해서 할일 목록을 재설정
     setTodos(updateTodos);
   }
+
+  useEffect({})
 
   return (
     <div>
@@ -62,3 +65,12 @@ function App() {
 }
 
 export default App;
+
+//map 배열 객체 메서드
+//배열의 각 요소에서 함수를 호출하고, 그 함수에 반환 값으로 새로운 배열을 생성
+//예제코드
+//   const newArray = array.map((value,index, array) => {});
+//  value : 현재 배열안에 있는 배열의 요소
+// index :  배열안에잇는 자리값
+// array: 배열의 원본
+// 반환값 : 새로운 배열에서 해당하는 인덱스에 들어갈 값
