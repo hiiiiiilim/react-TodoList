@@ -1,11 +1,10 @@
 import React from "react";
-
-function Footer(){
-    return(
-        <Footer>
-            <p>&copy; 2023 My Website. All right reserved.</p>
-            <p><a href="/">git URL</a></p>
-        </Footer>
+function Footer() {
+    return (
+        <footer>
+            <p>&copy; 2023 My website. All rights reserved. </p>
+            <p><a href="https://github.com">gitURL</a></p>
+        </footer>
     )
 }
 

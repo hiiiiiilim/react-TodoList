@@ -4,6 +4,7 @@ import TodoList from './component/TodoList'
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import './App.css'
+import About from "./component/About";
 
 function App(){
     return(
@@ -24,6 +25,7 @@ function App(){
                 <Routes>
                     <Route path="/todo" element={<TodoList/>}></Route>
                 </Routes>
+                <About/>
                 <Footer />
             </div>
         </Router>
